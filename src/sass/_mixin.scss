@@ -1,0 +1,172 @@
+// заголовок карточки
+@mixin title {
+  font: {
+    family: 'Banny Bold';
+    size: 36px;
+  }
+  text-transform: uppercase;
+  // line-height: 1.33;
+}
+
+// используется для подписи оглавления карточки
+@mixin subtitle {
+  font: {
+    weight: 700;
+    size: 18px;
+  }
+  line-height: 1.55;
+}
+
+// используется для описания карточки
+@mixin text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 30px;
+}
+
+// header карточек
+@mixin headerCard {
+  display: block;
+  margin: 0 auto;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 7px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+// желтое подчеркивание
+@mixin underline {
+  width: 60px;
+  height: 5px;
+  background-color: $yellow;
+  border-radius: 50px;
+  margin: 15px auto;
+}
+
+//прозрачные линии в header-е
+
+@mixin opacityLineheader {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  margin-top: 200px;
+  height: 481px;
+  width: 1px;
+  border-left: 1px solid rgba($white, 0.2);
+
+  &:before {
+    position: absolute;
+    margin-top: -110px;
+    display: block;
+    content: '';
+    height: 710px;
+    width: 1px;
+    border-left: 1px solid rgba($white, 0.2);
+    margin-left: 425px;
+  }
+
+  &:after {
+    position: absolute;
+    margin-top: -110px;
+    display: block;
+    content: '';
+    height: 710px;
+    width: 1px;
+    border-left: 1px solid rgba($white, 0.2);
+    margin-left: -425px;
+  }
+}
+
+// прозрачные линии в остальном блоке
+
+@mixin opacityLine {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  margin: 0 auto;
+  height: 800px;
+  width: 1px;
+
+  border-left: 1px solid rgba($white, 0.2);
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 800px;
+    width: 1px;
+    border-left: 1px solid rgba($white, 0.2);
+    margin-left: 425px;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 800px;
+    width: 1px;
+    border-left: 1px solid rgba($white, 0.2);
+    margin-left: -425px;
+  }
+}
+
+// желтая кнопка
+
+@mixin yellowbtn {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $yellow;
+
+  font-weight: 700;
+  line-height: 1.66;
+  font-size: 12px;
+  color: $white;
+  padding: 25px 0;
+
+  max-width: 565.5px;
+
+  display: block;
+  border-radius: 5px;
+  border: 1px solid $yellow;
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+// желтая рамка возле фото
+
+@mixin yellowBorder {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  z-index: 1;
+  height: 210px;
+  width: 210px;
+  border: 20px solid #e8c300;
+  border-radius: 5px;
+}
+
+// стилизация серых input-ов
+
+@mixin inputs {
+  width: 50%;
+  max-width: 277px;
+  height: 60px;
+  background-color: #e5e5e5;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 1.35;
+  padding: 25px 0 25px 21px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
